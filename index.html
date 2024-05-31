@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>202313259 김준성</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+    $(document).ready(function() {
+      $(".nav-link").on("click", function(event) {
+        event.preventDefault(); // 기본 앵커 동작을 막음
+        
+        // 기존 container 요소를 삭제
+        $(".container").remove(); 
+        
+        // 새로운 container 요소를 생성하고 추가
+        $("<div class='container'></div>").appendTo("body");
+        
+        // 클릭된 링크의 href 값을 가져와서 해당 ID를 가진 요소를 표시
+        var targetId = $(this).attr("href");
+        $(targetId).appendTo(".container").show(); 
+        
+        // URL을 업데이트하여 해당 위치로 스크롤
+        window.location.href = targetId;
+      });
+    });
+        </script>
+        <style>
+        body {width: 1000px; margin: 10px auto;}
+        .title {text-align: center; font-weight: bold; font-size: 2em; background-color:#4c2d37; color:white;}
+        .container {width: 1000px; position: absolute; background-color: white; border: 1px solid #aaaaaa; border-radius: 5px;}
+        table {margin: 0 20px 0 0; border-spacing: 0px; border-width: 2px; border: solid #6e36ef; font-size: 20px;}
+        .subtitle {font-weight: bold; font-size: 1.5em; }
+        #profile {float:right;}
+        th, td {padding: 10px 25px 10px 25px; border-width: 0 0 1px; border-color: #DDDDDD;}
+        </style>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1">
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">김준성</div>
+            <div class="subtitle"></div>
+            <table id="doc" border="1">
+                <tr>
+                    <th>유년</th>
+                    <td><a class="nav-link" href="#a1" >유년시절의 기억</a></td>
+                </tr>
+                <tr>
+                    <th>컴공 진학</th>
+                    <td><a class="nav-link" href="#b1">컴퓨터공학과 진학까지</a></td>
+                </tr>
+            </table>
+            <table id="profile" border="1">
+                <tr>
+                    <th colspan="2">김준성</th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <img src="file:///C:/Users/USER/Downloads/KakaoTalk_20240531_163836014.jpg" width="400">
+                    </th>
+                </tr>
+                <tr>
+                    <th>본명</th>
+                    <td>김준성(Kim jun-sung)</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">출생</th>
+                    <td>2004년 8월 31일 (20세)</td>
+                </tr>
+                <tr>
+                    <td>경기도 남양주시 화도읍 창현로</td>
+                </tr>
+                <tr>
+                    <th>국적</th>
+                    <td>대한민국</td>
+                </tr>
+                <tr>
+                    <th>본관</th>
+                    <td>김해 김씨 (金海 金氏)</td>
+                </tr>
+                <tr>
+                    <th>신체</th>
+                    <td>171cm, B형</td>
+                </tr>
+                <tr>
+                    <th>가족</th>
+                    <td>부모님, 형</td>
+                </tr>
+                <tr>
+                    <th rowspan="5">학력</th>
+                    <td>차산병설유치원(졸업)</td>
+                </tr>
+                <tr>
+                    <td>차산초등학교(졸업)</td>
+                </tr>
+                <tr>
+                    <td>마석중학교(졸업)</td>
+                </tr>
+                <tr>
+                    <td>마석고등학교(졸업)</td>
+                </tr>
+                <tr>
+                    <td>강원대학교(재학중)</td>
+                </tr>
+                <tr>
+                    <th>MBTI</th>
+                    <td>ENTJ</td>
+                </tr>
+            </table>
+            <div class="box">
+                <p id="ia">1. 개요</p>
+                <p>대한민국의 평범한 20대 대학생<br>
+                    강원대학교 컴퓨터공학과에 재학중.
+
+                    안녕하세요, 저는 강원대학교 컴퓨터공학과에 재학 중인 김준성 이라고 합니다.
+                    현재 컴퓨터공학과에 재학하며 자료구조, HTML 웹프로그래밍, AI메타버스융합 등 다양한 분야의 컴퓨터공학을 전공하고 있으며
+                    2023년에 JAVA Script, C 등을 학습하여 유의미한 코딩 결과물을 만들었습니다.
+                    강원대학교에 오기 전, 저는 C, JAVA 등을 개인적으로 학습하며 과연 우리가 일상 생활속에서 사용하는
+                    버스의 노선 변경, 스마트폰의 프로그램 등 우리의 일상 속에 녹아있는 이런 코드들은
+                    과연 어떤 방식으로 짜여지고 어떻게 동작하는 것일지 궁금해졌고 탐구해보고 싶어졌습니다.
+                    따라서 이에 대해 더 깊이 탐구해보고 싶어 컴퓨터공학과에 진학하여 2024년 현재까지 심도있는 공부를 진행하게 되었습니다.
+                </p>
+            </div> 
+        </div>
+        <div id="a1" style="display:none;">
+            <h2>유년시절의 기억</h2>
+            <p>전 초등학교때부터 컴퓨터공학에 흥미 내지는 관심이 있었습니다.
+                초등학교 4학년 진학때 Scratch game으로 처음 게임을 만들었을 때 컴퓨터 프로그래밍 분야 전반에
+                깊은 흥미를 느끼게 되었습니다. 또한 전술한 대로 TV나 핸드폰 같은 기계들은 어떻게 작동할까 궁금해서
+                폐휴대폰을 몰래 분해해보려다 들켜 꾸중을 듣는 등 웃지 못할 일화들도 만들곤 했습니다.
+                그러다가 초등학교 5학년 시절에 기회가 닿아 타 학교에서 진행하는 영재반에서 공부할 수 있는 기회를 얻고
+                그곳에서 전문적인 수준까진 아니더라도 그 나잇대에 쉽게 접할 수 없는 다양한 학술적 학습을 받고
+                이공계 대학 과의 존재에 대해서도 깊이 흥미를 가지고 알게 되었습니다.</p>
+           </div>
+
+            <div id="b1" style="display:none;">
+            <h2>컴퓨터공학과 진학까지</h2>
+            <p>그러나 이공계 쪽에서 제가 영재반 사실 배운 내용들에 대해 더 깊이 공부할 수 있다는 사실만 알 뿐
+                정확히 어느 학과에서 공부해야할지까진 정해두지 않았기에 저는 고등학교 떄까진 정확히 학과를 정하지 않은채로
+                이과를 결정했습니다. 그 과정에서 잠시 방황의 시기로 미술 입시를 생각하다가 다시 이과로 돌아오는 등 사소한
+                고민이 있었지만 결국 최종적으론 어릴적부터 흥미가 있던 이공계쪽으로 돌아오게 되었습니다.
+                그렇게 제게 다가온 고등학교 3학년 초, 전 진학할 과를 고르던 찰나 담임선생님의 권유와 부모님의 추천, 그리고
+                가장 중요한 제 자신의 선택으로 과거 영재반 시절 제일 흥미가 있던 컴퓨터공학 쪽을 고르게 되었습니다.
+                물론 그 전부터 코딩학원에서 C와 JAVA에 대해 기초적으로 배워두었다는 점도 지분을 차지했고, 무엇보다
+                컴퓨터공학과에선 제가 과거에 궁금해하던 점들을 더 심도 깊게 배워 옛 질문에 대한 답을 내줄 수 있을 것이라는 
+                흥미가 제일 컸습니다. 그리하여 수능을 보고 강원대 컴퓨터공학과에 진학하게 되었습니다.</p>
+        </div>
+   </body>
+</html>
